@@ -34,8 +34,10 @@
 				padding-top: 30px;
 				background-color: $white;
 				z-index: -1;
+				transform: translateY(-200%);
 				transition: opacity ease $tr,
-						visibility ease $tr;
+						visibility ease $tr,
+						transform ease $tr;
 
 				li {
 					width: 100%;
@@ -55,6 +57,7 @@
 				.header__submenu {
 					opacity: 1;
 					visibility: visible;
+					transform: translateY(0);
 				}
 
 				.check {
@@ -85,11 +88,6 @@
 				&:hover {
 					opacity: 1;
 					color: $accent;
-
-					.header__submenu {
-						opacity: 1;
-						visibility: visible;
-					}
 				}
 			}
 
