@@ -14,6 +14,11 @@
 	&:hover {
 		opacity: $op;
 	}
+
+	&.hero_button {
+		padding: 18px 50px;
+		font-size: 18px;
+	}
 }
 
 .burger__button {

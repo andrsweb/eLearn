@@ -2,13 +2,30 @@ h1, .h1 {
 	font-family: $ff;
 	font-style: normal;
 	font-weight: $fw-bold;
-	font-size: 64px;
-	line-height: 77px;
+	font-size: 36px;
+	line-height: 34px;
 	letter-spacing: 0.01em;
 	color: $black;
+	margin-bottom: 24px;
+	position: relative;
+	text-align: center;
 
-	@media all and (min-width: $lg) {
-		font-size: 36px
+	@media all and (min-width: $xxl) {
+		font-size: 64px;
+		line-height: 77px;
+		text-align: left;
+
+		&::after {
+			content: "";
+			width: 255px;
+			height: 151px;
+			display: block;
+			position: absolute;
+			right: -148px;
+			top: -73px;
+			background-image: url('../img/hero/highlight.svg');
+			background-repeat: no-repeat;
+		}
 	}
 }
 
