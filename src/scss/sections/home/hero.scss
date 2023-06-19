@@ -1,0 +1,90 @@
+.hero {
+	background-color: $bg;
+	padding: 110px 0;
+	position: relative;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	&__texts {
+		max-width: 709px;
+		padding-top: 115px;
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 383px;
+			height: 52px;
+			display: block;
+			position: absolute;
+			left: -265px;
+			bottom: -107px;
+			background-image: url('../img/hero/line.svg');
+			background-repeat: no-repeat;
+		}
+
+		&::after {
+			content: "";
+			width: 217px;
+			height: 130px;
+			display: block;
+			position: absolute;
+			right: -85px;
+			bottom: -85px;
+			background-image: url('../img/hero/arrow.svg');
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__img {
+		width: 808px;
+		height: 784px;
+		position: absolute;
+		right: -225px;
+		top: 0px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__items {
+		display: flex;
+		margin: 32px 0 56px 0;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-right: 48px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		img {
+			margin-right: 12px;
+		}
+
+		&_desc {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-regular;
+			font-size: 18px;
+			line-height: 22px;
+			letter-spacing: 0.01em;
+			color: $black;
+		}
+	}
+
+	.circle__img {
+		position: absolute;
+		left: -500px;
+		top: -68px;
+	}
+}
