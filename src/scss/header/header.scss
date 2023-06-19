@@ -19,6 +19,48 @@
 
 		&_item {
 			margin-right: 72px;
+			position: relative;
+			z-index: 1;
+
+			.header__submenu {
+				display: flex;
+				opacity: 0;
+				visibility: hidden;
+				flex-direction: column;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				padding-top: 30px;
+				background-color: $white;
+				z-index: -1;
+				transition: opacity ease $tr,
+						visibility ease $tr;
+
+				li {
+					width: 100%;
+					cursor: pointer;
+					transition: opacity ease $tr;
+
+					&:hover {
+						opacity: $op;
+					}
+				}
+			}
+
+			&:hover {
+				opacity: 1;
+				color: $accent;
+
+				.header__submenu {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				.check {
+					transform: rotate(180deg);
+				}
+			}
 
 			a {
 				display: flex;
@@ -30,9 +72,24 @@
 				line-height: 22px;
 				letter-spacing: 0.01em;
 				color: $black;
+				transition: color ease $tr;
 
 				picture {
 					margin-left: 8px;
+				}
+
+				.check {
+					transition: transform ease $tr;
+				}
+
+				&:hover {
+					opacity: 1;
+					color: $accent;
+
+					.header__submenu {
+						opacity: 1;
+						visibility: visible;
+					}
 				}
 			}
 
