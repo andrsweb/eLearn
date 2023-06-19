@@ -1,0 +1,242 @@
+.popup__wrapper {
+	position:fixed;
+	display:none;
+	align-items:center;
+	justify-content:center;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index: 100;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(2px);
+
+	form {
+		width: 100%;
+		max-width: 464px;
+		background: #FEFDFC;
+		padding: 32px;
+		border-radius: 12px;
+		margin: auto 0;
+	}
+
+	.form__title {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-bold;
+		font-size: 20px;
+		line-height: 15px;
+		letter-spacing: 0.01em;
+		color: $black;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 32px;
+
+		@media all and (min-width: $lg) {
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
+	fieldset {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.input__wrapper {
+		display: flex;
+		position: relative;
+
+		.eye__wrapper {
+			position: absolute;
+			right: 14px;
+			top: 20%;
+			cursor: pointer;
+			transition: opacity ease $tr;
+			background-color: transparent;
+
+			&:hover {
+				opacity: $op;
+			}
+
+			&.clicked {
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 40%;
+					transform: rotate(-135deg);
+					display: block;
+					width: 100%;
+					height: 3px;
+					border-radius: 10px;
+					background-color: $black;
+				}
+			}
+		}
+	}
+
+	.input {
+		width: 100%;
+		font-family: $ff;
+		font-style: normal;
+		font-weight: $fw-regular;
+		font-size: 12px;
+		line-height: 15px;
+		letter-spacing: 0.01em;
+		color: $black;
+		padding: 15px 0 15px 15px;
+		border: 1px solid $border;
+		border-radius: 4px;
+		margin-bottom: 28px;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		&:focus {
+			border: 1.5px solid $accent;
+		}
+
+		&.last_input {
+			margin-bottom: 21px;
+		}
+
+		&::placeholder {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-regular;
+			font-size: 12px;
+			line-height: 15px;
+			letter-spacing: 0.01em;
+			color: $black;
+			opacity: 1;
+			padding-left: 16px;
+
+			@media all and (min-width: $md) {
+				font-size: 18px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	.checkbox {
+		width: 20px;
+		height: 20px;
+		margin: 0;
+		margin-right: 8px;
+	}
+
+	&.showed {
+		display: flex;
+	}
+
+	.popup__container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto 0;
+	}
+
+	.popup__terms {
+		display: flex;
+		align-items: center;
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 0.01em;
+		color: $terms;
+		margin-bottom: 35px;
+
+		a {
+			text-decoration: underline;
+			color: $terms;
+		}
+	}
+
+	.dropdown {
+		&.opened {
+			.dropdown_area {
+				margin-bottom: 0;
+			}
+
+			.dropdown__open {
+				margin-bottom: 32px;
+				border: 1px solid $border;
+				border-radius: 4px;
+				border-top: none;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			.dropdown__check {
+				transform: rotate( 180deg);
+				top: 30%;
+			}
+		}
+
+		&__open {
+			overflow: hidden;
+			height: 0;
+			transition: height ease 0.2s;
+		}
+
+		&__inner {
+			padding: 10px 16px;
+		}
+
+		&__title {
+			position: relative;
+		}
+
+		&__text {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-regular;
+			font-size: 18px;
+			line-height: 22px;
+			letter-spacing: 0.01em;
+			color: $black;
+			margin-bottom: 8px;
+			cursor: pointer;
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__check {
+			position: absolute;
+			right: 14px;
+			top: 20%;
+			transition: transform ease $tr;
+		}
+
+		&_item {
+			margin-bottom: 8px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

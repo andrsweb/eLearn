@@ -1,0 +1,126 @@
+.button {
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	font-size: 16px;
+	line-height: 19px;
+	color: $white;
+	padding: 12px 17px;
+	border-radius: $btn;
+	background-color: $accent;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
+
+	&.hero_button {
+		padding: 18px 50px;
+		font-size: 18px;
+	}
+}
+
+.burger__button {
+    width: 35px;
+    height: 25px;
+    position: relative;
+    transition: $tr;
+    cursor: pointer;
+	z-index: 100;
+	background-color: $white;
+
+	&:hover {
+		span::after {
+			transform: translateX(5px);
+		}
+	}
+    
+    @media all and (min-width: $lg) {
+		display: none;
+	}
+
+    span {
+        width: 100%;				
+        height: 2px;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        background: $black;
+
+            &::after, &::before {
+                content: "";
+				transition: transform ease $tr;
+                width: 100%;
+                position: absolute;
+                top: 12px;
+                right: 0;
+                height: 2px;
+                background: $black;
+            }
+
+            &::before {
+                content: "";
+                top: 6px;
+            }
+        }
+
+        &.active {
+            span {
+                width: 100%;				
+                height: 2px;
+                position: absolute;
+                top: 10px;
+                right: 0;
+                background: transparent;
+            
+                &::after, &::before {
+                    content: "";
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 2px;
+                    background: $black;
+                    transform: rotate(-45deg);
+                }
+
+                &::before {
+                    content: "";
+                    transform: rotate(45deg);
+                }
+            }
+        }
+	}
+
+	// For popup
+	.popup__close {
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+		transition: opacity ease $tr;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		&:hover {
+			opacity: $op;
+		}
+
+		span {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: $black;
+			transform: rotate( 45deg );
+
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: $black;
+				transform: rotate( -90deg );
+			}
+		}
+	}
