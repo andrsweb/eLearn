@@ -30,13 +30,18 @@
 		font-family: $ff;
 		font-style: normal;
 		font-weight: $fw-bold;
-		font-size: 24px;
-		line-height: 29px;
+		font-size: 20px;
+		line-height: 15px;
 		letter-spacing: 0.01em;
 		color: $black;
 		width: 100%;
 		text-align: center;
 		margin-bottom: 32px;
+
+		@media all and (min-width: $lg) {
+			font-size: 24px;
+			line-height: 29px;
+		}
 	}
 
 	fieldset {
@@ -84,14 +89,19 @@
 		font-family: $ff;
 		font-style: normal;
 		font-weight: $fw-regular;
-		font-size: 18px;
-		line-height: 22px;
+		font-size: 12px;
+		line-height: 15px;
 		letter-spacing: 0.01em;
 		color: $black;
 		padding: 15px 0 15px 15px;
 		border: 1px solid $border;
 		border-radius: 4px;
 		margin-bottom: 28px;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+			line-height: 22px;
+		}
 
 		&:focus {
 			border: 1.5px solid $accent;
@@ -105,12 +115,17 @@
 			font-family: $ff;
 			font-style: normal;
 			font-weight: $fw-regular;
-			font-size: 18px;
-			line-height: 22px;
+			font-size: 12px;
+			line-height: 15px;
 			letter-spacing: 0.01em;
 			color: $black;
 			opacity: 1;
 			padding-left: 16px;
+
+			@media all and (min-width: $md) {
+				font-size: 18px;
+				line-height: 22px;
+			}
 		}
 	}
 
@@ -144,7 +159,7 @@
 		line-height: 17px;
 		letter-spacing: 0.01em;
 		color: $terms;
-		margin-bottom: 50px;
+		margin-bottom: 35px;
 
 		a {
 			text-decoration: underline;
@@ -165,6 +180,11 @@
 				border-top: none;
 				border-top-left-radius: 0;
 				border-top-right-radius: 0;
+			}
+
+			.dropdown__check {
+				transform: rotate( 180deg);
+				top: 30%;
 			}
 		}
 
@@ -207,6 +227,7 @@
 			position: absolute;
 			right: 14px;
 			top: 20%;
+			transition: transform ease $tr;
 		}
 
 		&_item {
