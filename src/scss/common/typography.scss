@@ -15,7 +15,7 @@ h1, .h1 {
 a {
 	display: inline-block;
 	text-decoration: none;
-	transition: color ease-out $tr;
+	transition: opacity ease-out $tr;
 	color: $black;
 
 	&:hover {

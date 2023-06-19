@@ -1,0 +1,19 @@
+.button {
+	border: 0;
+	border-style: none;
+	font-family: $ff;
+	font-style: normal;
+	font-weight: $fw-semibold;
+	font-size: 16px;
+	line-height: 19px;
+	color: $white;
+	padding: 12px 17px;
+	border-radius: $btn;
+	background-color: $accent;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
+}
