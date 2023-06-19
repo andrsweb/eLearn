@@ -62,6 +62,7 @@
 			top: 20%;
 			cursor: pointer;
 			transition: opacity ease $tr;
+			background-color: transparent;
 
 			&:hover {
 				opacity: $op;
@@ -71,8 +72,8 @@
 				&::before {
 					content: "";
 					position: absolute;
-					left: -1px;
-					top: 35%;
+					left: 0;
+					top: 40%;
 					transform: rotate(-135deg);
 					display: block;
 					width: 100%;
