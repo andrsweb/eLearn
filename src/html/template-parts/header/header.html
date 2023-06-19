@@ -22,4 +22,26 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header"></header>
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a class="header__logo" href="/">
+						<img src="img/header/header-logo.svg" width="110" height="35" alt="">
+					</a>
+					<div class="header__inner">
+						@@include( './header-nav.html' )
+						<div class="header__buttons">
+							<a class="header__link" href="#">
+								Log in
+							</a>
+							<button class="button" type="button">
+								Register
+							</button>
+						</div>
+					</div>
+					<button class="burger__button" type="button">
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
