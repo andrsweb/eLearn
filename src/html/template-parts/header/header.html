@@ -24,43 +24,13 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				<div class="header header__wrapper">
-					<a class="header header__logo" href="/">
+				<div class="header__wrapper">
+					<a class="header__logo" href="/">
 						<img src="img/header/header-logo.svg" width="110" height="35" alt="">
 					</a>
-					<nav class="header header__nav">
-						<ul class="header header__list">
-							<li class="header header__list_item">
-								<a href="#">
-									About
-								</a>
-							</li>
-							<li class="header header__list_item">
-								<a href="#">
-									Courses
-									<img src="img/header/check.svg" width="22" height="22" alt="">
-								</a>
-							</li>
-							<li class="header header__list_item">
-								<a href="#">
-									Universities
-									<img src="img/header/check.svg" width="22" height="22" alt="">
-								</a>
-							</li>
-							<li class="header header__list_item">
-								<a href="#">
-									Online Degrees
-								</a>
-							</li>
-							<li class="header header__list_item">
-								<a href="#">
-									Teachers
-								</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="header header__buttons">
-						<a class="header header__link" href="#">
+					@@include( './header-nav.html' )
+					<div class="header__buttons">
+						<a class="header__link" href="#">
 							Log in
 						</a>
 						<button class="button" type="button">
