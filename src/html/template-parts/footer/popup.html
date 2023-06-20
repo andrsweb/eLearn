@@ -1,15 +1,30 @@
 <section class="popup__wrapper" id="popup__lock">
 	<form class="popup">
 		<fieldset>
-			<div class="form__title">
+			<h2 class="form__title">
 				Registration
 				<div class="popup__close">
 					<span></span>
 				</div>
+			</h2>
+			<div class="input__wrapper">
+				<input class="input" type="text" placeholder="Name Surname">
+				<div class="trie">
+					Name
+				</div>
 			</div>
-			<input class="input" type="text" placeholder="Name Surname">
-			<input class="input" type="email" placeholder="Email">
-			<input class="input" type="tel" placeholder="Phone">
+			<div class="input__wrapper">
+				<input class="input" type="email" placeholder="Email">
+				<div class="trie">
+					Email
+				</div>
+			</div>
+			<div class="input__wrapper">
+				<input class="input" type="tel" placeholder="Phone">
+				<div class="trie">
+					Phone
+				</div>
+			</div>
 			<div class="dropdown">
 				<div class="dropdown__title">
 					<input class="input dropdown_area" type="text" placeholder="Where did you find us">
@@ -37,12 +52,18 @@
 			</div>
 			<span class="input__wrapper">
 				<input class="input" type="password" placeholder="Password">
+				<div class="trie">
+					Password
+				</div>
 				<button class="eye__wrapper" type="button">
 					<img class="eye" src="img/popup/eye.svg" width="24" height="24" alt="">
 				</button>
 			</span>
 			<span class="input__wrapper">
 				<input class="input last_input" type="password" placeholder="Confirm password">
+				<div class="trie">
+					Confirm
+				</div>
 				<button class="eye__wrapper" type="button">
 					<img class="eye" src="img/popup/eye.svg" width="24" height="24" alt="">
 				</button>
