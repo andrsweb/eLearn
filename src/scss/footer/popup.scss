@@ -18,7 +18,7 @@
 		width: 100%;
 		max-width: 464px;
 		background: #FEFDFC;
-		padding: 32px;
+		padding: 27px 32px;
 		border-radius: 12px;
 		margin: auto 0;
 	}
@@ -27,20 +27,23 @@
 		position: relative;
 		display: flex;
 		justify-content: center;
-		font-family: $ff;
-		font-style: normal;
-		font-weight: $fw-bold;
-		font-size: 20px;
-		line-height: 15px;
-		letter-spacing: 0.01em;
-		color: $black;
-		width: 100%;
-		text-align: center;
-		margin-bottom: 32px;
 
-		@media all and (min-width: $lg) {
-			font-size: 24px;
-			line-height: 29px;
+		h2 {
+			font-family: $ff;
+			font-style: normal;
+			font-weight: $fw-bold;
+			font-size: 20px;
+			line-height: 15px;
+			letter-spacing: 0.01em;
+			color: $black;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 32px;
+	
+			@media all and (min-width: $lg) {
+				font-size: 24px;
+				line-height: 29px;
+			}
 		}
 	}
 
